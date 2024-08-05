@@ -16,6 +16,16 @@ export interface UserResult {
   phone: string;
   picture: Picture;
   nat: string;
+  location: {
+    city: string;
+    street: {
+      name: string;
+      number: number;
+    };
+    postcode: string;
+    country: string;
+    state: string;
+  };
   dob: {
     age: number;
     date: string;

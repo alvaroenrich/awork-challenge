@@ -47,6 +47,9 @@ export class AppComponent extends SubscribedClass implements OnInit {
       });
   }
 
+  /**
+   * Switches the category which users are grouped by
+   */
   switchCategory(): void {
     const nextCategoryIdx =
       this.categories.indexOf(this.currentlyAppliedCategory) + 1 >=
@@ -57,12 +60,14 @@ export class AppComponent extends SubscribedClass implements OnInit {
     this.groupUsersData();
   }
 
+  /**
+   * Groups user data by category. Uses a web worker.
+   */
   private groupUsersData(): void {
     const worker = new Worker(
       new URL('./web-workers/users.worker', import.meta.url),
     );
     worker.addEventListener('message', ({ data }) => {
-      console.log('grouped', data);
       this.groupedUsers = data;
     });
     worker.postMessage({

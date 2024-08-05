@@ -6,44 +6,87 @@
     border-bottom: 1px solid $color-fog;
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
-    height: 60px;
     padding: 12px;
     color: $color-night;
+    .user-summary {
+      display: flex;
+      width: 100%;
+      .user-item__image {
+        border-radius: 20%;
+        height: 40px;
+        width: 40px;
+      }
 
-    &__image {
-      border-radius: 20%;
-      height: 40px;
-      width: 40px;
+      .user-item__name,
+      .user-item__email,
+      .user-item__phone {
+        margin: 12px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      .user-item__name {
+        flex: 1;
+        min-width: 100px;
+      }
+
+      .user-item__email {
+        width: 220px;
+      }
+
+      .user-item__phone {
+        width: 110px;
+      }
+
+      .user-item__nat {
+        margin-left: 12px;
+        text-align: right;
+        width: 80px;
+      }
     }
-
-    &__name,
-    &__email,
-    &__phone {
-      margin: 12px;
+    .user-details {
+      max-height: 0;
+      width: 100%;
       overflow: hidden;
-      text-overflow: ellipsis;
-      text-align: left;
-      white-space: nowrap;
-    }
-
-    &__name {
-      flex: 1;
-      min-width: 100px;
-    }
-
-    &__email {
-      width: 220px;
-    }
-
-    &__phone {
-      width: 110px;
-    }
-
-    &__nat {
-      margin-left: 12px;
-      text-align: right;
-      width: 80px;
+      transition:
+        max-height 0.5s ease-out,
+        opacity 0.5s ease-out;
+      opacity: 0;
+      &.show {
+        padding: $spacing-m;
+        max-height: 100px;
+        opacity: 1;
+        transition:
+          max-height 0.5s ease-in,
+          opacity 0.5s ease-in;
+      }
+      &__line {
+        display: flex;
+        flex-direction: row;
+        gap: $spacing-xs;
+      }
+      &__hint {
+        font-size: $font-size-tiny;
+        line-height: $line-height-tiny;
+        color: $gray-light-400;
+        display: flex;
+        flex-direction: row;
+        margin: auto 0;
+        &::after {
+          content: ":";
+        }
+      }
+      &__street,
+      &__state {
+        margin-right: $spacing-l;
+      }
+      &__zipcode {
+        margin-right: auto;
+      }
     }
   }
 }

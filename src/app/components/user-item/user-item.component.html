@@ -1,11 +1,35 @@
-<div class="user-item">
-  <img class="user-item__image" [src]="user().image" />
+<div class="user-item" (click)="toggleDetails()">
+  <div class="user-summary">
+    <img class="user-item__image" [src]="user().image" />
 
-  <p class="user-item__name">{{ user().firstname }} {{ user().lastname }}</p>
+    <span class="user-item__name"
+      >{{ user().firstname }} {{ user().lastname }}</span
+    >
 
-  <p class="user-item__email">{{ user().email }}</p>
+    <span class="user-item__email">{{ user().email }}</span>
 
-  <p class="user-item__phone">{{ user().phone }}</p>
+    <span class="user-item__phone">{{ user().phone }}</span>
 
-  <p class="user-item__nat">{{ user().nat }} ({{ nationalitiesCount }})</p>
+    <span class="user-item__nat"
+      >{{ user().nat }} ({{ nationalitiesCount }})</span
+    >
+  </div>
+  <div class="user-details" #userDetails>
+    <div class="user-details__line">
+      <span class="user-details__hint">Street</span>
+      <span class="user-details__street">{{ user().address?.street }}</span>
+      <span class="user-details__hint">Zipcode</span>
+      <span class="user-details__zipcode">{{ user().address?.zipCode }}</span>
+      <span class="user-details__hint">Date of Birth</span>
+      <span class="user-details__dob">{{
+        user().dateOfBirth | date: "dd/MM/yyyy"
+      }}</span>
+    </div>
+    <div class="user-details__line">
+      <span class="user-details__hint">State</span>
+      <span class="user-details__state">{{ user().address?.state }}</span>
+      <span class="user-details__hint">Country</span>
+      <span class="user-details__country">{{ user().address?.country }}</span>
+    </div>
+  </div>
 </div>

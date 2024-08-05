@@ -19,7 +19,7 @@ export class UsersService {
    */
   getUsers(page = 1): Observable<User[]> {
     return this.httpClient
-      .get<ApiResult>(`${this.apiUrl}?results=5000&seed=awork&page=${page}`)
+      .get<ApiResult>(`${this.apiUrl}?results=50&seed=awork&page=${page}`)
       .pipe(map((apiResult) => User.mapFromUserResult(apiResult.results)));
   }
 }

@@ -10,6 +10,13 @@ interface LoginInfo extends Object {
   sha256: string;
 }
 
+interface AddressInfo extends Object {
+  street: string;
+  state: string;
+  country: string;
+  zipCode: string;
+}
+
 export class User {
   firstname?: string;
   lastname?: string;
@@ -18,6 +25,8 @@ export class User {
   image?: string;
   nat?: string;
   age?: number;
+  dateOfBirth?: Date;
+  address?: AddressInfo;
   login?: LoginInfo;
 
   constructor(data: Partial<User> = {}) {
@@ -49,6 +58,13 @@ export class User {
           nat: user.nat,
           login: user.login,
           age: user.dob.age,
+          dateOfBirth: new Date(user.dob.date),
+          address: {
+            state: user.location.state,
+            street: `${user.location.street.name}, ${user.location.street.number}`,
+            zipCode: user.location.postcode.toString().padStart(5, '0'),
+            country: user.location.country,
+          },
         }),
     );
   }

@@ -18,19 +18,20 @@
       margin: auto auto auto 0;
     }
     button {
-      background-color: #ebf5ff;
+      background-color: var(--color-sky);
       border: none;
       padding: 12px;
       border-radius: 12px;
-      color: #5576aa;
+      color: var(--color-steel);
       cursor: pointer;
       font-size: 16px;
+      border: 2px solid transparent;
       &:active {
-        border: 2px solid #5576aa;
-        background-color: #d3dce5;
+        border: 2px solid var(--color-steel);
+        background-color: var(--color-fog);
       }
       &:hover {
-        background-color: #d3dce5;
+        background-color: var(--color-fog);
       }
     }
   }
