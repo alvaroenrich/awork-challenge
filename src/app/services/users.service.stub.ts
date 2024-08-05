@@ -5,10 +5,9 @@ import { UserResult } from '../models/api-result.model';
 import { MockResult } from '../mock-data';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UsersServiceStub {
-
   /**
    * Fetches 5000 mock users from the api
    * @param {number} page
@@ -16,7 +15,9 @@ export class UsersServiceStub {
    */
   getUsers(page = 1): Observable<User[]> {
     return of(MockResult).pipe(
-      map(apiResult => User.mapFromUserResult(apiResult.results as UserResult[]))
+      map((apiResult) =>
+        User.mapFromUserResult(apiResult.results as UserResult[]),
+      ),
     );
   }
 }

@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { UsersService } from './services/users.service'
-import { UsersServiceStub } from './services/users.service.stub'
+import { UsersService } from './services/users.service';
+import { UsersServiceStub } from './services/users.service.stub';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -10,9 +10,9 @@ describe('AppComponent', () => {
       providers: [
         {
           provide: UsersService,
-          useClass: UsersServiceStub
-        }
-      ]
+          useClass: UsersServiceStub,
+        },
+      ],
     }).compileComponents();
   });
 
