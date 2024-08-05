@@ -1,7 +1,11 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { UsersService } from './services/users.service';
 import { User } from './models/user.model';
 import { UserListComponent } from './components/user-list/user-list.component';
+import { takeUntil } from 'rxjs';
+import { SubscribedClass } from './directives/subscribed.directive';
+
+export type GroupingCategories = 'ALPHABETICALLY' | 'AGE' | 'NATIONALITY';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +14,61 @@ import { UserListComponent } from './components/user-list/user-list.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent implements OnInit {
+export class AppComponent extends SubscribedClass implements OnInit {
   usersService = inject(UsersService);
 
   users: User[] = [];
 
+  groupedUsers: Record<string, User[]> = {};
+
+  currentlyAppliedCategory: GroupingCategories = 'ALPHABETICALLY';
+
+  private categories: GroupingCategories[] = [
+    'ALPHABETICALLY',
+    'AGE',
+    'NATIONALITY',
+  ];
+
+  get displayedCategories(): string[] {
+    return Object.keys(this.groupedUsers);
+  }
+
+  constructor(private cdr: ChangeDetectorRef) {
+    super();
+  }
+
   ngOnInit(): void {
-    this.usersService.getUsers().subscribe((users) => {
-      this.users = users;
+    this.usersService
+      .getUsers()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((users) => {
+        this.users = users;
+        this.groupUsersData();
+      });
+  }
+
+  switchCategory(): void {
+    const nextCategoryIdx =
+      this.categories.indexOf(this.currentlyAppliedCategory) + 1 >=
+      this.categories.length
+        ? 0
+        : this.categories.indexOf(this.currentlyAppliedCategory) + 1;
+    this.currentlyAppliedCategory = this.categories[nextCategoryIdx];
+    this.groupUsersData();
+  }
+
+  private groupUsersData(): void {
+    const worker = new Worker(
+      new URL('./web-workers/users.worker', import.meta.url),
+    );
+    worker.addEventListener('message', ({ data }) => {
+      console.log('grouped', data);
+      this.groupedUsers = data;
     });
+    worker.postMessage({
+      users: this.users,
+      category: this.currentlyAppliedCategory,
+    });
+    this.cdr.markForCheck();
   }
 }

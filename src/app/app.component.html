@@ -1,5 +1,10 @@
 <header>
   <img src="logo.svg" alt="awork logo" />
 </header>
-
-<app-user-list [users]="users"></app-user-list>
+<div class="sorting-information">
+  <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
+  <button (click)="switchCategory()">Switch Category</button>
+</div>
+@for (key of displayedCategories; track $index) {
+  <app-user-list [users]="groupedUsers[key]" [title]="key"></app-user-list>
+}

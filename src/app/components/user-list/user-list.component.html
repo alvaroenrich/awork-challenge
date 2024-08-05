@@ -1,9 +1,12 @@
 @if (users().length) {
-  <article class="user-list">
-    @for (user of users(); track $index) {
-      <app-user-item [user]="user" [allUsers]="users()" />
-    }
-  </article>
+  <div class="user-list-container">
+    <h2 class="user-list-title">{{ title() }}</h2>
+    <article class="user-list">
+      @for (user of users(); track $index) {
+        <app-user-item [user]="user" [allUsers]="users()" />
+      }
+    </article>
+  </div>
 } @else {
   <article class="user-list">
     <p>Loading…</p>

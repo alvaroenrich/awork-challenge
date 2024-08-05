@@ -17,6 +17,7 @@ export class User {
   phone?: string;
   image?: string;
   nat?: string;
+  age?: number;
   login?: LoginInfo;
 
   constructor(data: Partial<User> = {}) {
@@ -47,6 +48,7 @@ export class User {
           image: user.picture.medium,
           nat: user.nat,
           login: user.login,
+          age: user.dob.age,
         }),
     );
   }

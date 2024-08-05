@@ -1,14 +1,20 @@
 @import "ease/ease-import.scss";
 
 :host {
-  .user-list {
-    background-color: $color-white;
-    border-radius: 18px;
-    border: 6px solid $color-sky;
+  .user-list-container {
+    max-width: 60%;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 60%;
     padding: 12px;
+    .user-list-title {
+      padding: 12px;
+    }
+    .user-list {
+      background-color: $color-white;
+      border-radius: 18px;
+      border: 6px solid $color-sky;
+      padding: 12px;
+    }
   }
 }

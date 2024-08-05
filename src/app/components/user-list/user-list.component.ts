@@ -11,4 +11,5 @@ import { UserItemComponent } from '../user-item/user-item.component';
 })
 export class UserListComponent {
   users = input.required<User[]>();
+  title = input.required<string>();
 }

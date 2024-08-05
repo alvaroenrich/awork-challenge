@@ -16,6 +16,10 @@ export interface UserResult {
   phone: string;
   picture: Picture;
   nat: string;
+  dob: {
+    age: number;
+    date: string;
+  };
   login: {
     uuid: string;
     username: string;
