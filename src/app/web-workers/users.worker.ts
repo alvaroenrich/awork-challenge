@@ -15,7 +15,6 @@ addEventListener('message', ({ data }) => {
 
   const processNextDataChunk = () => {
     const chunk = users.slice(currentIndex, currentIndex + CHUNK_SIZE);
-    console.log('processing chunk');
     switch (category) {
       case 'ALPHABETICALLY':
         result = { ...result, ...groupAlphabetically(chunk) };
@@ -36,7 +35,6 @@ addEventListener('message', ({ data }) => {
       requestAnimationFrame(processNextDataChunk);
     } else {
       // Processing complete
-      console.log('Will finish', result);
       postMessage(result);
     }
   };
