@@ -15,6 +15,13 @@
       border-radius: 18px;
       border: 6px solid $color-sky;
       padding: 12px;
+      app-user-item {
+        display: block;
+        border-bottom: 1px solid $color-fog;
+        &:last-of-type {
+          border-bottom: none;
+        }
+      }
     }
   }
 }

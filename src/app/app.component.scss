@@ -35,4 +35,13 @@
       }
     }
   }
+  .loading-spinner {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    img {
+      max-height: 80px;
+      width: fit-content;
+    }
+  }
 }

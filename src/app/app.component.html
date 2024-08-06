@@ -1,10 +1,18 @@
 <header>
   <img src="logo.svg" alt="awork logo" />
 </header>
-<div class="sorting-information">
-  <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
-  <button (click)="switchCategory()">Switch Category</button>
-</div>
-@for (key of displayedCategories; track $index) {
-  <app-user-list [users]="groupedUsers[key]" [title]="key"></app-user-list>
+
+@if (displayedCategories.length) {
+  <div class="sorting-information">
+    <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
+    <button (click)="switchCategory()">Switch Category</button>
+  </div>
+  @for (key of displayedCategories; track $index) {
+    <app-user-list [users]="groupedUsers[key]" [title]="key"></app-user-list>
+  }
+} @else {
+  <article class="loading-spinner">
+    <img src="loading.svg" alt="Loading" />
+    <span>Loading users data</span>
+  </article>
 }
