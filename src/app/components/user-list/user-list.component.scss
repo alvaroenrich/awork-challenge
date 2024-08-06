@@ -7,6 +7,10 @@
     flex-direction: column;
     margin: 0 auto;
     padding: 12px;
+
+    @media only screen and (max-width: 600px) {
+      max-width: 85%;
+    }
     .user-list-title {
       padding: 12px;
     }
@@ -15,11 +19,17 @@
       border-radius: 18px;
       border: 6px solid $color-sky;
       padding: 12px;
-      app-user-item {
-        display: block;
+      .user-list__viewport-wrapper {
         border-bottom: 1px solid $color-fog;
         &:last-of-type {
           border-bottom: none;
+        }
+      }
+      .user-list__viewport {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari and Opera */
         }
       }
     }

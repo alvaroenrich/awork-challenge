@@ -12,7 +12,7 @@ addEventListener('message', ({ data }) => {
 const groupResults = (
   data: User[],
   category: GroupingCategories,
-): { [key: string]: User[] } => {
+): Record<string, User[]> => {
   switch (category) {
     case 'AGE':
       return groupAge(data);
@@ -23,8 +23,8 @@ const groupResults = (
   }
 };
 
-const groupAlphabetically = (data: User[]): { [key: string]: User[] } => {
-  const result: { [key: string]: User[] } = {};
+const groupAlphabetically = (data: User[]): Record<string, User[]> => {
+  const result: Record<string, User[]> = {};
   for (let i = 0; i < 26; i++) {
     const letter = String.fromCharCode(65 + i); // Generate letters from A to Z
     result[letter] = [];
@@ -48,8 +48,8 @@ const groupAlphabetically = (data: User[]): { [key: string]: User[] } => {
   return result;
 };
 
-const groupNationality = (data: User[]): { [key: string]: User[] } => {
-  const result: { [key: string]: User[] } = {};
+const groupNationality = (data: User[]): Record<string, User[]> => {
+  const result: Record<string, User[]> = {};
 
   data.forEach((user) => {
     if (user.nat) {
@@ -62,8 +62,8 @@ const groupNationality = (data: User[]): { [key: string]: User[] } => {
 
   return result;
 };
-const groupAge = (data: User[]): { [key: string]: User[] } => {
-  const result: { [key: string]: User[] } = {};
+const groupAge = (data: User[]): Record<string, User[]> => {
+  const result: Record<string, User[]> = {};
   data.forEach((user) => {
     if (user.age) {
       const age = user.age.toString();

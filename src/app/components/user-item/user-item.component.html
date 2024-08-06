@@ -15,21 +15,23 @@
     >
   </div>
   <div class="user-details" #userDetails>
-    <div class="user-details__line">
-      <span class="user-details__hint">Street</span>
-      <span class="user-details__street">{{ user().address?.street }}</span>
-      <span class="user-details__hint">Zipcode</span>
-      <span class="user-details__zipcode">{{ user().address?.zipCode }}</span>
-      <span class="user-details__hint">Date of Birth</span>
-      <span class="user-details__dob">{{
-        user().dateOfBirth | date: "dd/MM/yyyy"
-      }}</span>
+    <div class="user-details__address">
+      <div class="user-details__line">
+        <span class="user-details__hint">Street</span>
+        <span class="user-details__street">{{ user().address?.street }}</span>
+        <span class="user-details__hint">Zipcode</span>
+        <span class="user-details__zipcode">{{ user().address?.zipCode }}</span>
+      </div>
+      <div class="user-details__line">
+        <span class="user-details__hint">State</span>
+        <span class="user-details__state">{{ user().address?.state }}</span>
+        <span class="user-details__hint">Country</span>
+        <span class="user-details__country">{{ user().address?.country }}</span>
+      </div>
     </div>
-    <div class="user-details__line">
-      <span class="user-details__hint">State</span>
-      <span class="user-details__state">{{ user().address?.state }}</span>
-      <span class="user-details__hint">Country</span>
-      <span class="user-details__country">{{ user().address?.country }}</span>
+    <div class="user-details__dob">
+      <span class="user-details__hint">Date of Birth</span>
+      <span>{{ user().dateOfBirth | date: "dd/MM/yyyy" }}</span>
     </div>
   </div>
 </div>

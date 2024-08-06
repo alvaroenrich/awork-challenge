@@ -1,8 +1,16 @@
-import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  WritableSignal,
+  inject,
+  signal,
+} from '@angular/core';
 import { UsersService } from './services/users.service';
 import { User } from './models/user.model';
 import { UserListComponent } from './components/user-list/user-list.component';
-import { takeUntil } from 'rxjs';
+import { takeUntil, tap } from 'rxjs';
 import { SubscribedClass } from './directives/subscribed.directive';
 
 export type GroupingCategories = 'ALPHABETICALLY' | 'AGE' | 'NATIONALITY';
@@ -13,11 +21,13 @@ export type GroupingCategories = 'ALPHABETICALLY' | 'AGE' | 'NATIONALITY';
   imports: [UserListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent extends SubscribedClass implements OnInit {
-  usersService = inject(UsersService);
+  private usersService = inject(UsersService);
+  private cdr = inject(ChangeDetectorRef);
 
-  users: User[] = [];
+  public loading = true;
 
   groupedUsers: Record<string, User[]> = {};
 
@@ -33,16 +43,12 @@ export class AppComponent extends SubscribedClass implements OnInit {
     return Object.keys(this.groupedUsers);
   }
 
-  constructor(private cdr: ChangeDetectorRef) {
-    super();
-  }
-
   ngOnInit(): void {
+    this.usersService.reset();
     this.usersService
       .getUsers()
       .pipe(takeUntil(this.destroy$))
-      .subscribe((users) => {
-        this.users = users;
+      .subscribe(() => {
         this.groupUsersData();
       });
   }
@@ -64,14 +70,17 @@ export class AppComponent extends SubscribedClass implements OnInit {
    * Groups user data by category. Uses a web worker.
    */
   private groupUsersData(): void {
+    this.loading = true;
     const worker = new Worker(
       new URL('./web-workers/users.worker', import.meta.url),
     );
     worker.addEventListener('message', ({ data }) => {
       this.groupedUsers = data;
+      this.loading = false;
+      this.cdr.markForCheck();
     });
     worker.postMessage({
-      users: this.users,
+      users: this.usersService.users,
       category: this.currentlyAppliedCategory,
     });
     this.cdr.markForCheck();

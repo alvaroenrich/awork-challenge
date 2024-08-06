@@ -1,13 +1,16 @@
 import {
+  ChangeDetectionStrategy,
   Component,
   ElementRef,
   OnChanges,
   SimpleChanges,
   ViewChild,
+  inject,
   input,
 } from '@angular/core';
 import { User } from '../../models/user.model';
 import { DatePipe } from '@angular/common';
+import { UsersService } from '../../services/users.service';
 
 @Component({
   selector: 'app-user-item',
@@ -15,21 +18,22 @@ import { DatePipe } from '@angular/common';
   templateUrl: './user-item.component.html',
   styleUrl: './user-item.component.scss',
   imports: [DatePipe],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UserItemComponent implements OnChanges {
   user = input.required<User>();
-  allUsers = input.required<User[]>();
   @ViewChild('userDetails', { read: ElementRef }) detailsRef!: ElementRef;
+  private usersService = inject(UsersService);
 
   /**
    * Get the count of users with same nationality
    */
   get nationalitiesCount(): number {
-    if (!this.allUsers().length) {
+    if (!this.usersService.users.length) {
       return 0;
     }
 
-    return this.allUsers().reduce((acc, user) => {
+    return this.usersService.users.reduce((acc, user) => {
       return user.nat === this.user().nat ? acc + 1 : acc;
     }, 0);
   }

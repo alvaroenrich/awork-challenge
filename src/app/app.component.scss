@@ -13,6 +13,9 @@
     flex-direction: row;
     margin: 0 auto;
     gap: 12px;
+    @media only screen and (max-width: 600px) {
+      max-width: 85%;
+    }
     span {
       height: fit-content;
       margin: auto auto auto 0;

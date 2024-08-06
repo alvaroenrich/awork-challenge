@@ -2,7 +2,7 @@
   <img src="logo.svg" alt="awork logo" />
 </header>
 
-@if (displayedCategories.length) {
+@if (!loading) {
   <div class="sorting-information">
     <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
     <button (click)="switchCategory()">Switch Category</button>

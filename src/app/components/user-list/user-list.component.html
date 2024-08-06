@@ -2,9 +2,19 @@
   <div class="user-list-container">
     <h2 class="user-list-title">{{ title() }}</h2>
     <article class="user-list">
-      @for (user of users(); track $index) {
-        <app-user-item [user]="user" [allUsers]="users()" />
-      }
+      <cdk-virtual-scroll-viewport
+        itemSize="50"
+        class="user-list__viewport"
+        [style.height.px]="viewportHeight"
+        #scrollViewport
+      >
+        <div
+          class="user-list__viewport-wrapper"
+          *cdkVirtualFor="let user of users()"
+        >
+          <app-user-item [user]="user" />
+        </div>
+      </cdk-virtual-scroll-viewport>
     </article>
   </div>
 } @else {

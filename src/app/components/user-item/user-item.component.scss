@@ -12,10 +12,19 @@
     .user-summary {
       display: flex;
       width: 100%;
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+      }
       .user-item__image {
         border-radius: 20%;
         height: 40px;
         width: 40px;
+        @media only screen and (max-width: 600px) {
+          align-self: center;
+          height: 60px;
+          width: 60px;
+        }
       }
 
       .user-item__name,
@@ -45,6 +54,9 @@
         margin-left: 12px;
         text-align: right;
         width: 80px;
+        @media only screen and (max-width: 600px) {
+          text-align: left;
+        }
       }
     }
     .user-details {
@@ -55,6 +67,12 @@
         max-height 0.5s ease-out,
         opacity 0.5s ease-out;
       opacity: 0;
+      flex-direction: row;
+      display: flex;
+
+      @media only screen and (max-width: 600px) {
+        flex-direction: column;
+      }
       &.show {
         padding: $spacing-m;
         max-height: 100px;
@@ -79,12 +97,33 @@
           content: ":";
         }
       }
+      &__address {
+        width: 50%;
+        @media only screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+      &__dob {
+        width: fit-content;
+        margin-left: auto;
+        @media only screen and (max-width: 600px) {
+          margin-left: 0;
+          padding-top: $spacing-l;
+        }
+      }
       &__street,
       &__state {
         margin-right: $spacing-l;
+
+        @media only screen and (max-width: 600px) {
+          margin-right: auto;
+        }
       }
       &__zipcode {
         margin-right: auto;
+        @media only screen and (max-width: 600px) {
+          margin-right: 0;
+        }
       }
     }
   }
