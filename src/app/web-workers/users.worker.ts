@@ -4,24 +4,44 @@ import { GroupingCategories } from '../app.component';
 import { User } from '../models/user.model';
 
 addEventListener('message', ({ data }) => {
-  const usersData = groupResults(data.users, data.category);
+  const users: User[] = data.users;
+  const category: GroupingCategories = data.category;
 
-  postMessage(usersData);
+  // Split data in chunks of 100 to improve data process times.
+  const CHUNK_SIZE = 100;
+
+  let result = {};
+  let currentIndex = 0;
+
+  const processNextDataChunk = () => {
+    const chunk = users.slice(currentIndex, currentIndex + CHUNK_SIZE);
+    console.log('processing chunk');
+    switch (category) {
+      case 'ALPHABETICALLY':
+        result = { ...result, ...groupAlphabetically(chunk) };
+        break;
+      case 'AGE':
+        result = { ...result, ...groupAge(chunk) };
+        break;
+      case 'NATIONALITY':
+        result = { ...result, ...groupNationality(chunk) };
+        break;
+      default:
+        result = {};
+    }
+
+    currentIndex += CHUNK_SIZE;
+    if (currentIndex < users.length) {
+      // Schedule the next chunk
+      requestAnimationFrame(processNextDataChunk);
+    } else {
+      // Processing complete
+      console.log('Will finish', result);
+      postMessage(result);
+    }
+  };
+  processNextDataChunk();
 });
-
-const groupResults = (
-  data: User[],
-  category: GroupingCategories,
-): Record<string, User[]> => {
-  switch (category) {
-    case 'AGE':
-      return groupAge(data);
-    case 'ALPHABETICALLY':
-      return groupAlphabetically(data);
-    case 'NATIONALITY':
-      return groupNationality(data);
-  }
-};
 
 const groupAlphabetically = (data: User[]): Record<string, User[]> => {
   const result: Record<string, User[]> = {};
