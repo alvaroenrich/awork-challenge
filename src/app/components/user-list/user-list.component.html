@@ -2,6 +2,12 @@
   <div class="user-list-container">
     <h2 class="user-list-title">{{ title() }}</h2>
     <article class="user-list">
+      <div class="user-list__header">
+        <span class="user-list__header-name">Name</span>
+        <span class="user-list__header-email">Email</span>
+        <span class="user-list__header-phone">Phone</span>
+        <span class="user-list__header-nat">Nationality</span>
+      </div>
       <cdk-virtual-scroll-viewport
         itemSize="50"
         class="user-list__viewport"

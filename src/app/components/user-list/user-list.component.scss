@@ -6,13 +6,36 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    padding: 12px;
+    padding: $spacing-m;
 
     @media only screen and (max-width: 600px) {
       max-width: 85%;
     }
     .user-list-title {
-      padding: 12px;
+      padding: $spacing-m;
+    }
+    .user-list__header {
+      @media only screen and (max-width: 600px) {
+        display: none;
+      }
+      padding: $spacing-m;
+      display: flex;
+      gap: $spacing-xxl;
+      &-name {
+        min-width: 100px;
+        margin-left: $spacing-xxxxl;
+        padding-left: $spacing-m;
+        margin-right: auto;
+      }
+      &-email {
+        width: 220px;
+      }
+      &-phone {
+        width: 110px;
+      }
+      &-nat {
+        width: 80px;
+      }
     }
     .user-list {
       background-color: $color-white;
