@@ -4,35 +4,63 @@ Hello ! Welcome to the awork challenge 🤩. We are looking forward to seeing wh
 
 Let us know if you have any questions and refer to the instructions sent to you. This readme contains mostly the install steps to get up and running with the application in its initial state.
 
-### Prerequisites
+## Challenges
 
-- Install [Node.js](https://nodejs.org/) which includes [Node Package Manager][npm](https://www.npmjs.com/get-npm)
-- Run `npm install` to install the node packages
+- Show a list of users grouped by a specific category.
 
-## Introduction
+  - The grouping of the array of Users should be done via a Web Worker.
+  - Criteria can be chosen: alphabetically, age, nationality, etc.
+  - [Bonus Point] Add a button which switches the grouping between multiple categories.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+  ```
+  SOLUTION: What I've decided to do is basically to have a fetch the data from the API normally and once I have the data accessible open a new web worker in order to process the data in the web worker. I've created different methods to group by different categories, and if in the future some other like gender wanted to be created, it is easy to do by creating a new groupable category and grouping function.
 
-## Development server
+  ISSUES: When working with large amounts of data the application freezes. Solved later in performance challenge.
+  ```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Groups should look nice in the UI
 
-## Code scaffolding
+  - CHECK BELOW: Idea of result (Don’t limit yourself to this idea, make it look awesome!).
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  ```
+  SOLUTION: Since I did not have a large amount of time and I'm not a master of design, I decided to go for the same approach as the one shown in the screenshot, with some small improvements. I'd rather work with a proposed figma to make the look & feel pixel perfect.
+  ```
 
-## Build
+- Show **5000 Users** on the page with good load and runtime performance without using pagination (even in mobile devices).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  - Improve components performance.
+  - The page should load fast.
+  - The page should be interactive fast.
+  - No performance degradation when interacting with the page.
+  - Optimize device resources usage: CPU, memory.
 
-## Running unit tests
+  ```
+  SOLUTION: This has been by far the most challenging issue of this technical assesment. I'm not used to work with these amount of data, and to have a good performance, interaction times and loading times, I've applied several measures.
+    - OnPush detection strategy
+    - Virtual Scrolling in list component -> Avoid creating unnecessary (not viewed) DOM elements. This helped with the interaction times.
+    - Splitting the data into several chunks to be processed separately and have better loading times.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+  I want to add here that I was new to some Virtual scrolling, and at least now thanks to your assesment I've learned that :)
+  ```
 
-## Running end-to-end tests
+- When clicking on a User from the list, the item should expand inside the same list with a cool animation and show extra information the API provides in a nice and clear way.
+  - Feel free to choose the information you display.
+  ```
+  SOLUTION: Done in the item component.
+  ```
+- Improve the overall UI/UX of the app until you are proud of it. The code provided already has some basic styles which are coming from our original awork app, but it still deserves some love.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+  - Make it look awesome by, for example, adding a header for the list columns, an improved loading state, etc.
+  - Here you can be creative about it, the sky is the limit!
 
-## Further help
+  ```
+  SOLUTION: Again, I'm not a master design, and I'm used to work with a Figma from which I can go to pixel perfect design implementation. Also, running short on time I decided to go deeper in other challenges such as the performance one.
+  ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Write a documentation on how you approached the problem and what the solution consists of.
+  ```
+  SOLUTION: These README file is the documentation on where I'm explaining how I faced the problems and which solutions I decided to go for.
+  ```
+- [Bonus Point] Search users without using API.
+- [Bonus Point] Add pagination using the page size of 5000 items
+  The API documentation has the information on how to do this.
