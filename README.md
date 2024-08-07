@@ -4,6 +4,11 @@ Hello ! Welcome to the awork challenge 🤩. We are looking forward to seeing wh
 
 Let us know if you have any questions and refer to the instructions sent to you. This readme contains mostly the install steps to get up and running with the application in its initial state.
 
+## How To run:
+
+- `npm i`
+- `npm run start`
+
 ## Challenges
 
 - Show a list of users grouped by a specific category.
