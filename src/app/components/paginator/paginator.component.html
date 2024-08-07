@@ -1,0 +1,11 @@
+<div class="paginator">
+  <span
+    class="prev-page"
+    [ngClass]="{ 'prev-page--disabled': prevPageDisabled }"
+    (click)="prevPage()"
+  >
+    <
+  </span>
+  {{ page() }}
+  <span class="next-page" (click)="nextPage()"> > </span>
+</div>

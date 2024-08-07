@@ -1,0 +1,17 @@
+@import "ease/ease-import.scss";
+
+:host {
+  .paginator {
+    display: flex;
+    flex-direction: row;
+    gap: $spacing-m;
+    .prev-page,
+    .next-page {
+      cursor: pointer;
+      &--disabled {
+        cursor: default;
+        color: #d3d3d3;
+      }
+    }
+  }
+}

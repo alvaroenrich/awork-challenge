@@ -62,5 +62,11 @@ Let us know if you have any questions and refer to the instructions sent to you.
   SOLUTION: These README file is the documentation on where I'm explaining how I faced the problems and which solutions I decided to go for.
   ```
 - [Bonus Point] Search users without using API.
+  ```
+  SOLUTION: I was running out of time. I thought of adding a input on top of the page, which could be located in the app.component. I'd then create a simple userFilterPipe to filter the list of users, checking if the first name of the user started with the value that the user typed in. This is easy and I could do this in the time I had, but the problem came when I thought  "OK, now I have to update the global users variable with the pipe, which is also easy, but then this change must trigger another grouping. It would take a lot of processing time if I had to do it every time the user was typing any letter, so I decided to go for an approach where the user has to click a submit button and with a minimum of an input of 3 letters to make sure that the results are not that many, in order to keep usability and performance.
+  ```
 - [Bonus Point] Add pagination using the page size of 5000 items
   The API documentation has the information on how to do this.
+  ```
+  SOLUTION: Again, running out of time I quickly implemented a reusable paginator component. This paginator can be improved, use icons instead of text directly, and have a better l&f. However, it works and I was trying to quickly get the challenge achieved.
+  ```

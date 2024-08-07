@@ -7,10 +7,10 @@
     justify-content: center;
     align-items: center;
   }
-  .sorting-information {
+  .app-container {
     max-width: 60%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin: 0 auto;
     gap: 12px;
     @media only screen and (max-width: 600px) {
@@ -20,11 +20,20 @@
       height: fit-content;
       margin: auto auto auto 0;
     }
+    input {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--color-text-light);
+      margin-right: 24px;
+      flex-grow: 1;
+      color: var(--color-text-light);
+    }
     button {
       background-color: var(--color-sky);
       border: none;
       padding: 12px;
       border-radius: 12px;
+      margin-left: auto;
       color: var(--color-steel);
       cursor: pointer;
       font-size: 16px;
@@ -36,6 +45,22 @@
       &:hover {
         background-color: var(--color-fog);
       }
+      &:disabled {
+        background-color: #d3d3d3;
+        cursor: not-allowed;
+      }
+    }
+    .sorting-information {
+      display: flex;
+      flex-direction: row;
+    }
+    .users-filter {
+      display: flex;
+      flex-direction: row;
+    }
+    app-paginator {
+      margin-left: auto;
+      margin-right: auto;
     }
   }
   .loading-spinner {

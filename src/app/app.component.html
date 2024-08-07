@@ -3,9 +3,24 @@
 </header>
 
 @if (!loading) {
-  <div class="sorting-information">
-    <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
-    <button (click)="switchCategory()">Switch Category</button>
+  <div class="app-container">
+    <div class="users-filter" [formGroup]="form">
+      <input
+        [formControlName]="'searchFilter'"
+        placeholder="Search user by First name. Type in at least 3 letters"
+      />
+      <button type="submit" [disabled]="form.invalid" (click)="filter()">
+        Filter users
+      </button>
+    </div>
+    <div class="sorting-information">
+      <span>Currently grouped by: {{ currentlyAppliedCategory }}</span>
+      <button (click)="switchCategory()">Switch Category</button>
+    </div>
+    <app-paginator
+      [page]="currentPage"
+      (pageChanged)="updatePage($event)"
+    ></app-paginator>
   </div>
   @for (key of displayedCategories; track $index) {
     <app-user-list [users]="groupedUsers[key]" [title]="key"></app-user-list>
