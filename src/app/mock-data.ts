@@ -25,14 +25,6 @@ export const MockResult: MockedResult = {
         state: 'Guerrero',
         country: 'Mexico',
         postcode: 25269,
-        coordinates: {
-          latitude: '28.0796',
-          longitude: '124.2176',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'marisela.fonseca@example.com',
       login: {
@@ -82,14 +74,6 @@ export const MockResult: MockedResult = {
         state: 'Roraima',
         country: 'Brazil',
         postcode: 46976,
-        coordinates: {
-          latitude: '43.0121',
-          longitude: '3.6831',
-        },
-        timezone: {
-          offset: '-3:30',
-          description: 'Newfoundland',
-        },
       },
       email: 'berardo.nogueira@example.com',
       login: {
@@ -139,14 +123,6 @@ export const MockResult: MockedResult = {
         state: 'Pomoravlje',
         country: 'Serbia',
         postcode: 84260,
-        coordinates: {
-          latitude: '-32.6465',
-          longitude: '-170.5116',
-        },
-        timezone: {
-          offset: '-11:00',
-          description: 'Midway Island, Samoa',
-        },
       },
       email: 'danilo.jeremic@example.com',
       login: {
@@ -196,14 +172,6 @@ export const MockResult: MockedResult = {
         state: 'Essex',
         country: 'United Kingdom',
         postcode: 'AW3I 2QP',
-        coordinates: {
-          latitude: '85.1041',
-          longitude: '92.3408',
-        },
-        timezone: {
-          offset: '+11:00',
-          description: 'Magadan, Solomon Islands, New Caledonia',
-        },
       },
       email: 'gilbert.west@example.com',
       login: {
@@ -253,14 +221,6 @@ export const MockResult: MockedResult = {
         state: 'Friesland',
         country: 'Netherlands',
         postcode: '3495 AM',
-        coordinates: {
-          latitude: '40.2152',
-          longitude: '-169.3867',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'antoinet.vinck@example.com',
       login: {
@@ -310,14 +270,6 @@ export const MockResult: MockedResult = {
         state: 'Humberside',
         country: 'United Kingdom',
         postcode: 'WH4F 4LH',
-        coordinates: {
-          latitude: '84.0300',
-          longitude: '176.2527',
-        },
-        timezone: {
-          offset: '+10:00',
-          description: 'Eastern Australia, Guam, Vladivostok',
-        },
       },
       email: 'dustin.martinez@example.com',
       login: {
@@ -367,14 +319,6 @@ export const MockResult: MockedResult = {
         state: 'Sachsen',
         country: 'Germany',
         postcode: 36103,
-        coordinates: {
-          latitude: '27.7989',
-          longitude: '51.4936',
-        },
-        timezone: {
-          offset: '-7:00',
-          description: 'Mountain Time (US & Canada)',
-        },
       },
       email: 'mahmoud.witt@example.com',
       login: {
@@ -424,14 +368,6 @@ export const MockResult: MockedResult = {
         state: 'Arkansas',
         country: 'United States',
         postcode: 37472,
-        coordinates: {
-          latitude: '-41.1882',
-          longitude: '-142.8045',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'tomothy.bradley@example.com',
       login: {
@@ -481,14 +417,6 @@ export const MockResult: MockedResult = {
         state: 'Mayo',
         country: 'Ireland',
         postcode: 61227,
-        coordinates: {
-          latitude: '82.7491',
-          longitude: '-83.5886',
-        },
-        timezone: {
-          offset: '-4:00',
-          description: 'Atlantic Time (Canada), Caracas, La Paz',
-        },
       },
       email: 'arthur.fox@example.com',
       login: {
@@ -538,14 +466,6 @@ export const MockResult: MockedResult = {
         state: 'Ontario',
         country: 'Canada',
         postcode: 'V7T 4Y2',
-        coordinates: {
-          latitude: '-49.1046',
-          longitude: '65.2961',
-        },
-        timezone: {
-          offset: '+5:30',
-          description: 'Bombay, Calcutta, Madras, New Delhi',
-        },
       },
       email: 'ava.williams@example.com',
       login: {
@@ -595,14 +515,6 @@ export const MockResult: MockedResult = {
         state: 'Midtjylland',
         country: 'Denmark',
         postcode: 44873,
-        coordinates: {
-          latitude: '-88.7392',
-          longitude: '128.4299',
-        },
-        timezone: {
-          offset: '+6:00',
-          description: 'Almaty, Dhaka, Colombo',
-        },
       },
       email: 'malou.thomsen@example.com',
       login: {
@@ -652,14 +564,6 @@ export const MockResult: MockedResult = {
         state: 'Mizoram',
         country: 'India',
         postcode: 16281,
-        coordinates: {
-          latitude: '-0.4819',
-          longitude: '-98.9996',
-        },
-        timezone: {
-          offset: '+1:00',
-          description: 'Brussels, Copenhagen, Madrid, Paris',
-        },
       },
       email: 'kabir.bansal@example.com',
       login: {
@@ -709,14 +613,6 @@ export const MockResult: MockedResult = {
         state: 'La Rioja',
         country: 'Spain',
         postcode: 52837,
-        coordinates: {
-          latitude: '22.4107',
-          longitude: '-98.1376',
-        },
-        timezone: {
-          offset: '-3:30',
-          description: 'Newfoundland',
-        },
       },
       email: 'joan.vicente@example.com',
       login: {
@@ -766,14 +662,6 @@ export const MockResult: MockedResult = {
         state: 'Louth',
         country: 'Ireland',
         postcode: 76107,
-        coordinates: {
-          latitude: '-41.1917',
-          longitude: '62.3584',
-        },
-        timezone: {
-          offset: '+3:00',
-          description: 'Baghdad, Riyadh, Moscow, St. Petersburg',
-        },
       },
       email: 'keith.stephens@example.com',
       login: {
@@ -823,14 +711,6 @@ export const MockResult: MockedResult = {
         state: 'Roraima',
         country: 'Brazil',
         postcode: 21489,
-        coordinates: {
-          latitude: '-81.3638',
-          longitude: '-54.9860',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'arcadio.caldeira@example.com',
       login: {
@@ -880,14 +760,6 @@ export const MockResult: MockedResult = {
         state: 'Zaječar',
         country: 'Serbia',
         postcode: 29250,
-        coordinates: {
-          latitude: '-13.3694',
-          longitude: '26.4945',
-        },
-        timezone: {
-          offset: '+3:30',
-          description: 'Tehran',
-        },
       },
       email: 'vuk.rakic@example.com',
       login: {
@@ -937,14 +809,6 @@ export const MockResult: MockedResult = {
         state: 'Baja California Sur',
         country: 'Mexico',
         postcode: 66296,
-        coordinates: {
-          latitude: '-50.2498',
-          longitude: '-97.9767',
-        },
-        timezone: {
-          offset: '+9:00',
-          description: 'Tokyo, Seoul, Osaka, Sapporo, Yakutsk',
-        },
       },
       email: 'luismanuel.contreras@example.com',
       login: {
@@ -994,14 +858,6 @@ export const MockResult: MockedResult = {
         state: 'Washington',
         country: 'United States',
         postcode: 69815,
-        coordinates: {
-          latitude: '51.5015',
-          longitude: '54.1392',
-        },
-        timezone: {
-          offset: '+5:45',
-          description: 'Kathmandu',
-        },
       },
       email: 'claudia.long@example.com',
       login: {
@@ -1051,14 +907,6 @@ export const MockResult: MockedResult = {
         state: 'Región de Murcia',
         country: 'Spain',
         postcode: 33971,
-        coordinates: {
-          latitude: '-35.3717',
-          longitude: '121.2075',
-        },
-        timezone: {
-          offset: '-1:00',
-          description: 'Azores, Cape Verde Islands',
-        },
       },
       email: 'jorge.cano@example.com',
       login: {
@@ -1108,14 +956,6 @@ export const MockResult: MockedResult = {
         state: 'Tasmania',
         country: 'Australia',
         postcode: 4371,
-        coordinates: {
-          latitude: '-15.9333',
-          longitude: '-45.4346',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'edgar.chapman@example.com',
       login: {
@@ -1165,14 +1005,6 @@ export const MockResult: MockedResult = {
         state: 'Baden-Württemberg',
         country: 'Germany',
         postcode: 23735,
-        coordinates: {
-          latitude: '-75.5127',
-          longitude: '-97.3712',
-        },
-        timezone: {
-          offset: '+10:00',
-          description: 'Eastern Australia, Guam, Vladivostok',
-        },
       },
       email: 'hasso.klinke@example.com',
       login: {
@@ -1222,14 +1054,6 @@ export const MockResult: MockedResult = {
         state: 'Northern Savonia',
         country: 'Finland',
         postcode: 83879,
-        coordinates: {
-          latitude: '-37.2305',
-          longitude: '-43.1577',
-        },
-        timezone: {
-          offset: '-5:00',
-          description: 'Eastern Time (US & Canada), Bogota, Lima',
-        },
       },
       email: 'amanda.karvonen@example.com',
       login: {
@@ -1279,14 +1103,6 @@ export const MockResult: MockedResult = {
         state: 'مازندران',
         country: 'Iran',
         postcode: 77872,
-        coordinates: {
-          latitude: '-8.7227',
-          longitude: '46.5126',
-        },
-        timezone: {
-          offset: '+3:00',
-          description: 'Baghdad, Riyadh, Moscow, St. Petersburg',
-        },
       },
       email: 'rh.khrymy@example.com',
       login: {
@@ -1336,14 +1152,6 @@ export const MockResult: MockedResult = {
         state: 'São Paulo',
         country: 'Brazil',
         postcode: 12013,
-        coordinates: {
-          latitude: '38.7396',
-          longitude: '-113.5707',
-        },
-        timezone: {
-          offset: '-9:00',
-          description: 'Alaska',
-        },
       },
       email: 'tulio.barbosa@example.com',
       login: {
@@ -1393,14 +1201,6 @@ export const MockResult: MockedResult = {
         state: 'Sarthe',
         country: 'France',
         postcode: 11192,
-        coordinates: {
-          latitude: '83.4255',
-          longitude: '145.0379',
-        },
-        timezone: {
-          offset: '-3:00',
-          description: 'Brazil, Buenos Aires, Georgetown',
-        },
       },
       email: 'remy.jean@example.com',
       login: {
@@ -1450,14 +1250,6 @@ export const MockResult: MockedResult = {
         state: 'Oaxaca',
         country: 'Mexico',
         postcode: 46341,
-        coordinates: {
-          latitude: '89.5290',
-          longitude: '-108.4546',
-        },
-        timezone: {
-          offset: '+11:00',
-          description: 'Magadan, Solomon Islands, New Caledonia',
-        },
       },
       email: 'leonel.robledo@example.com',
       login: {
@@ -1507,14 +1299,6 @@ export const MockResult: MockedResult = {
         state: 'Otago',
         country: 'New Zealand',
         postcode: 87690,
-        coordinates: {
-          latitude: '62.7024',
-          longitude: '14.0956',
-        },
-        timezone: {
-          offset: '+9:30',
-          description: 'Adelaide, Darwin',
-        },
       },
       email: 'max.williams@example.com',
       login: {
@@ -1564,14 +1348,6 @@ export const MockResult: MockedResult = {
         state: 'Monaghan',
         country: 'Ireland',
         postcode: 26282,
-        coordinates: {
-          latitude: '18.9725',
-          longitude: '83.1476',
-        },
-        timezone: {
-          offset: '+1:00',
-          description: 'Brussels, Copenhagen, Madrid, Paris',
-        },
       },
       email: 'eleanor.coleman@example.com',
       login: {
@@ -1621,14 +1397,6 @@ export const MockResult: MockedResult = {
         state: 'Rio Grande do Norte',
         country: 'Brazil',
         postcode: 47190,
-        coordinates: {
-          latitude: '-57.0453',
-          longitude: '135.1018',
-        },
-        timezone: {
-          offset: '+11:00',
-          description: 'Magadan, Solomon Islands, New Caledonia',
-        },
       },
       email: 'antonia.nascimento@example.com',
       login: {
@@ -1678,14 +1446,6 @@ export const MockResult: MockedResult = {
         state: 'Tavastia Proper',
         country: 'Finland',
         postcode: 93465,
-        coordinates: {
-          latitude: '-31.3796',
-          longitude: '-100.2874',
-        },
-        timezone: {
-          offset: '-1:00',
-          description: 'Azores, Cape Verde Islands',
-        },
       },
       email: 'vilma.luoma@example.com',
       login: {
@@ -1735,14 +1495,6 @@ export const MockResult: MockedResult = {
         state: 'Northland',
         country: 'New Zealand',
         postcode: 20887,
-        coordinates: {
-          latitude: '-38.0143',
-          longitude: '44.9559',
-        },
-        timezone: {
-          offset: '+5:30',
-          description: 'Bombay, Calcutta, Madras, New Delhi',
-        },
       },
       email: 'brooklyn.patel@example.com',
       login: {
@@ -1792,14 +1544,6 @@ export const MockResult: MockedResult = {
         state: 'Tasmania',
         country: 'Australia',
         postcode: 2131,
-        coordinates: {
-          latitude: '29.8954',
-          longitude: '-14.7265',
-        },
-        timezone: {
-          offset: '-9:00',
-          description: 'Alaska',
-        },
       },
       email: 'elijah.castro@example.com',
       login: {
@@ -1849,14 +1593,6 @@ export const MockResult: MockedResult = {
         state: 'Arizona',
         country: 'United States',
         postcode: 73710,
-        coordinates: {
-          latitude: '23.4994',
-          longitude: '-102.9677',
-        },
-        timezone: {
-          offset: '+9:30',
-          description: 'Adelaide, Darwin',
-        },
       },
       email: 'janet.mckinney@example.com',
       login: {
@@ -1906,14 +1642,6 @@ export const MockResult: MockedResult = {
         state: 'Dún Laoghaire–Rathdown',
         country: 'Ireland',
         postcode: 45965,
-        coordinates: {
-          latitude: '68.3336',
-          longitude: '-165.0691',
-        },
-        timezone: {
-          offset: '-3:00',
-          description: 'Brazil, Buenos Aires, Georgetown',
-        },
       },
       email: 'ava.reed@example.com',
       login: {
@@ -1963,14 +1691,6 @@ export const MockResult: MockedResult = {
         state: 'Westmeath',
         country: 'Ireland',
         postcode: 92023,
-        coordinates: {
-          latitude: '-40.2974',
-          longitude: '142.9048',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'gordon.lewis@example.com',
       login: {
@@ -2020,14 +1740,6 @@ export const MockResult: MockedResult = {
         state: 'Uşak',
         country: 'Turkey',
         postcode: 13950,
-        coordinates: {
-          latitude: '-63.9441',
-          longitude: '-166.0720',
-        },
-        timezone: {
-          offset: '+4:00',
-          description: 'Abu Dhabi, Muscat, Baku, Tbilisi',
-        },
       },
       email: 'ulku.koyluoglu@example.com',
       login: {
@@ -2077,14 +1789,6 @@ export const MockResult: MockedResult = {
         state: 'Burdur',
         country: 'Turkey',
         postcode: 99962,
-        coordinates: {
-          latitude: '-25.9486',
-          longitude: '-40.5061',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'deniz.candan@example.com',
       login: {
@@ -2134,14 +1838,6 @@ export const MockResult: MockedResult = {
         state: 'Ternopilska',
         country: 'Ukraine',
         postcode: 60937,
-        coordinates: {
-          latitude: '82.1256',
-          longitude: '-142.1381',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'ustina.odaynik@example.com',
       login: {
@@ -2191,14 +1887,6 @@ export const MockResult: MockedResult = {
         state: 'Western Australia',
         country: 'Australia',
         postcode: 6908,
-        coordinates: {
-          latitude: '-82.7086',
-          longitude: '153.9036',
-        },
-        timezone: {
-          offset: '+2:00',
-          description: 'Kaliningrad, South Africa',
-        },
       },
       email: 'jim.ryan@example.com',
       login: {
@@ -2248,14 +1936,6 @@ export const MockResult: MockedResult = {
         state: 'Thüringen',
         country: 'Germany',
         postcode: 90309,
-        coordinates: {
-          latitude: '71.7932',
-          longitude: '-92.4253',
-        },
-        timezone: {
-          offset: '-9:00',
-          description: 'Alaska',
-        },
       },
       email: 'konstantinos.wall@example.com',
       login: {
@@ -2305,14 +1985,6 @@ export const MockResult: MockedResult = {
         state: 'Nebraska',
         country: 'United States',
         postcode: 39474,
-        coordinates: {
-          latitude: '-18.5615',
-          longitude: '67.3387',
-        },
-        timezone: {
-          offset: '-3:00',
-          description: 'Brazil, Buenos Aires, Georgetown',
-        },
       },
       email: 'becky.watkins@example.com',
       login: {
@@ -2362,14 +2034,6 @@ export const MockResult: MockedResult = {
         state: 'Ardahan',
         country: 'Turkey',
         postcode: 17590,
-        coordinates: {
-          latitude: '-68.3822',
-          longitude: '127.2077',
-        },
-        timezone: {
-          offset: '+3:30',
-          description: 'Tehran',
-        },
       },
       email: 'ali.oztonga@example.com',
       login: {
@@ -2419,14 +2083,6 @@ export const MockResult: MockedResult = {
         state: 'البرز',
         country: 'Iran',
         postcode: 64943,
-        coordinates: {
-          latitude: '-50.1490',
-          longitude: '118.0374',
-        },
-        timezone: {
-          offset: '+4:30',
-          description: 'Kabul',
-        },
       },
       email: 'nyysh.hmdy@example.com',
       login: {
@@ -2476,14 +2132,6 @@ export const MockResult: MockedResult = {
         state: 'Michoacan',
         country: 'Mexico',
         postcode: 63919,
-        coordinates: {
-          latitude: '-60.6938',
-          longitude: '-54.6029',
-        },
-        timezone: {
-          offset: '+6:00',
-          description: 'Almaty, Dhaka, Colombo',
-        },
       },
       email: 'natalia.lemus@example.com',
       login: {
@@ -2533,14 +2181,6 @@ export const MockResult: MockedResult = {
         state: 'Canterbury',
         country: 'New Zealand',
         postcode: 11307,
-        coordinates: {
-          latitude: '46.7136',
-          longitude: '-157.5840',
-        },
-        timezone: {
-          offset: '+7:00',
-          description: 'Bangkok, Hanoi, Jakarta',
-        },
       },
       email: 'piper.smith@example.com',
       login: {
@@ -2590,14 +2230,6 @@ export const MockResult: MockedResult = {
         state: 'Gelderland',
         country: 'Netherlands',
         postcode: '0191 IS',
-        coordinates: {
-          latitude: '-1.3278',
-          longitude: '54.2373',
-        },
-        timezone: {
-          offset: '-5:00',
-          description: 'Eastern Time (US & Canada), Bogota, Lima',
-        },
       },
       email: 'rowen.balci@example.com',
       login: {
@@ -2647,14 +2279,6 @@ export const MockResult: MockedResult = {
         state: 'Dublin City',
         country: 'Ireland',
         postcode: 44663,
-        coordinates: {
-          latitude: '-87.4684',
-          longitude: '38.9211',
-        },
-        timezone: {
-          offset: '+3:00',
-          description: 'Baghdad, Riyadh, Moscow, St. Petersburg',
-        },
       },
       email: 'clyde.ellis@example.com',
       login: {
@@ -2704,14 +2328,6 @@ export const MockResult: MockedResult = {
         state: 'Satakunta',
         country: 'Finland',
         postcode: 55980,
-        coordinates: {
-          latitude: '-61.7976',
-          longitude: '-0.2856',
-        },
-        timezone: {
-          offset: '0:00',
-          description: 'Western Europe Time, London, Lisbon, Casablanca',
-        },
       },
       email: 'helmi.maunu@example.com',
       login: {
@@ -2761,14 +2377,6 @@ export const MockResult: MockedResult = {
         state: 'Rio Grande do Norte',
         country: 'Brazil',
         postcode: 49742,
-        coordinates: {
-          latitude: '-22.6975',
-          longitude: '-18.8554',
-        },
-        timezone: {
-          offset: '+11:00',
-          description: 'Magadan, Solomon Islands, New Caledonia',
-        },
       },
       email: 'flora.souza@example.com',
       login: {
@@ -2818,14 +2426,6 @@ export const MockResult: MockedResult = {
         state: 'Rondônia',
         country: 'Brazil',
         postcode: 59018,
-        coordinates: {
-          latitude: '-33.0639',
-          longitude: '-8.0291',
-        },
-        timezone: {
-          offset: '-7:00',
-          description: 'Mountain Time (US & Canada)',
-        },
       },
       email: 'toledo.rocha@example.com',
       login: {
@@ -2875,14 +2475,6 @@ export const MockResult: MockedResult = {
         state: 'Kainuu',
         country: 'Finland',
         postcode: 20228,
-        coordinates: {
-          latitude: '5.2834',
-          longitude: '-133.5681',
-        },
-        timezone: {
-          offset: '+7:00',
-          description: 'Bangkok, Hanoi, Jakarta',
-        },
       },
       email: 'sofia.honkala@example.com',
       login: {
@@ -2932,14 +2524,6 @@ export const MockResult: MockedResult = {
         state: 'Rogaland',
         country: 'Norway',
         postcode: '3618',
-        coordinates: {
-          latitude: '-33.3788',
-          longitude: '-113.1078',
-        },
-        timezone: {
-          offset: '+6:00',
-          description: 'Almaty, Dhaka, Colombo',
-        },
       },
       email: 'mahmoud.dyrstad@example.com',
       login: {
@@ -2989,14 +2573,6 @@ export const MockResult: MockedResult = {
         state: 'Pennsylvania',
         country: 'United States',
         postcode: 74932,
-        coordinates: {
-          latitude: '-9.9345',
-          longitude: '167.4738',
-        },
-        timezone: {
-          offset: '-1:00',
-          description: 'Azores, Cape Verde Islands',
-        },
       },
       email: 'courtney.terry@example.com',
       login: {
@@ -3046,14 +2622,6 @@ export const MockResult: MockedResult = {
         state: 'Western Australia',
         country: 'Australia',
         postcode: 7956,
-        coordinates: {
-          latitude: '65.4968',
-          longitude: '-40.5520',
-        },
-        timezone: {
-          offset: '-7:00',
-          description: 'Mountain Time (US & Canada)',
-        },
       },
       email: 'pedro.flores@example.com',
       login: {
@@ -3103,14 +2671,6 @@ export const MockResult: MockedResult = {
         state: 'Fribourg',
         country: 'Switzerland',
         postcode: 8012,
-        coordinates: {
-          latitude: '-39.4350',
-          longitude: '111.5642',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'sara.gautier@example.com',
       login: {
@@ -3160,14 +2720,6 @@ export const MockResult: MockedResult = {
         state: 'Goa',
         country: 'India',
         postcode: 18046,
-        coordinates: {
-          latitude: '-39.3007',
-          longitude: '-59.1662',
-        },
-        timezone: {
-          offset: '-8:00',
-          description: 'Pacific Time (US & Canada)',
-        },
       },
       email: 'rudra.ramesh@example.com',
       login: {
@@ -3217,14 +2769,6 @@ export const MockResult: MockedResult = {
         state: 'Wicklow',
         country: 'Ireland',
         postcode: 13940,
-        coordinates: {
-          latitude: '56.5709',
-          longitude: '-105.5658',
-        },
-        timezone: {
-          offset: '+9:00',
-          description: 'Tokyo, Seoul, Osaka, Sapporo, Yakutsk',
-        },
       },
       email: 'clifford.moore@example.com',
       login: {
@@ -3274,14 +2818,6 @@ export const MockResult: MockedResult = {
         state: 'Bayern',
         country: 'Germany',
         postcode: 52976,
-        coordinates: {
-          latitude: '64.4338',
-          longitude: '-2.1866',
-        },
-        timezone: {
-          offset: '-10:00',
-          description: 'Hawaii',
-        },
       },
       email: 'marko.betz@example.com',
       login: {
@@ -3331,14 +2867,6 @@ export const MockResult: MockedResult = {
         state: 'Norfolk',
         country: 'United Kingdom',
         postcode: 'BW1E 2AP',
-        coordinates: {
-          latitude: '53.5010',
-          longitude: '27.6983',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'jessie.holmes@example.com',
       login: {
@@ -3388,14 +2916,6 @@ export const MockResult: MockedResult = {
         state: 'Nord-Trøndelag',
         country: 'Norway',
         postcode: '8681',
-        coordinates: {
-          latitude: '-17.3175',
-          longitude: '146.2929',
-        },
-        timezone: {
-          offset: '+10:00',
-          description: 'Eastern Australia, Guam, Vladivostok',
-        },
       },
       email: 'gabrielle.nordhagen@example.com',
       login: {
@@ -3445,14 +2965,6 @@ export const MockResult: MockedResult = {
         state: 'سمنان',
         country: 'Iran',
         postcode: 64185,
-        coordinates: {
-          latitude: '-68.2685',
-          longitude: '13.3722',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'tr.khrymy@example.com',
       login: {
@@ -3502,14 +3014,6 @@ export const MockResult: MockedResult = {
         state: 'Bremen',
         country: 'Germany',
         postcode: 92201,
-        coordinates: {
-          latitude: '-60.8897',
-          longitude: '-58.9311',
-        },
-        timezone: {
-          offset: '+2:00',
-          description: 'Kaliningrad, South Africa',
-        },
       },
       email: 'joana.marquardt@example.com',
       login: {
@@ -3559,14 +3063,6 @@ export const MockResult: MockedResult = {
         state: 'Sachsen-Anhalt',
         country: 'Germany',
         postcode: 23781,
-        coordinates: {
-          latitude: '36.9033',
-          longitude: '-114.8710',
-        },
-        timezone: {
-          offset: '-12:00',
-          description: 'Eniwetok, Kwajalein',
-        },
       },
       email: 'maik.kunkel@example.com',
       login: {
@@ -3616,14 +3112,6 @@ export const MockResult: MockedResult = {
         state: 'Buskerud',
         country: 'Norway',
         postcode: '6784',
-        coordinates: {
-          latitude: '-86.0261',
-          longitude: '68.1761',
-        },
-        timezone: {
-          offset: '+9:00',
-          description: 'Tokyo, Seoul, Osaka, Sapporo, Yakutsk',
-        },
       },
       email: 'adriana.gjelstad@example.com',
       login: {
@@ -3673,14 +3161,6 @@ export const MockResult: MockedResult = {
         state: 'Comunidad de Madrid',
         country: 'Spain',
         postcode: 16740,
-        coordinates: {
-          latitude: '-25.6017',
-          longitude: '-179.6398',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'rafael.mora@example.com',
       login: {
@@ -3730,14 +3210,6 @@ export const MockResult: MockedResult = {
         state: 'Aust-Agder',
         country: 'Norway',
         postcode: '9358',
-        coordinates: {
-          latitude: '5.9820',
-          longitude: '-144.7256',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'eik.kolltveit@example.com',
       login: {
@@ -3787,14 +3259,6 @@ export const MockResult: MockedResult = {
         state: 'Midtjylland',
         country: 'Denmark',
         postcode: 41012,
-        coordinates: {
-          latitude: '23.7569',
-          longitude: '69.2991',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'maja.johansen@example.com',
       login: {
@@ -3844,14 +3308,6 @@ export const MockResult: MockedResult = {
         state: 'Kolubara',
         country: 'Serbia',
         postcode: 35609,
-        coordinates: {
-          latitude: '-54.4814',
-          longitude: '170.1927',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'dusan.dokic@example.com',
       login: {
@@ -3901,14 +3357,6 @@ export const MockResult: MockedResult = {
         state: 'Friesland',
         country: 'Netherlands',
         postcode: '1750 IQ',
-        coordinates: {
-          latitude: '-4.8585',
-          longitude: '60.8769',
-        },
-        timezone: {
-          offset: '+9:00',
-          description: 'Tokyo, Seoul, Osaka, Sapporo, Yakutsk',
-        },
       },
       email: 'simcha.vanlammeren@example.com',
       login: {
@@ -3958,14 +3406,6 @@ export const MockResult: MockedResult = {
         state: 'Zuid-Holland',
         country: 'Netherlands',
         postcode: '6287 DO',
-        coordinates: {
-          latitude: '-22.1232',
-          longitude: '151.8646',
-        },
-        timezone: {
-          offset: '+9:30',
-          description: 'Adelaide, Darwin',
-        },
       },
       email: 'hibo.schaafsma@example.com',
       login: {
@@ -4015,14 +3455,6 @@ export const MockResult: MockedResult = {
         state: 'Indre-et-Loire',
         country: 'France',
         postcode: 29873,
-        coordinates: {
-          latitude: '-83.4205',
-          longitude: '45.6703',
-        },
-        timezone: {
-          offset: '+1:00',
-          description: 'Brussels, Copenhagen, Madrid, Paris',
-        },
       },
       email: 'clemence.mercier@example.com',
       login: {
@@ -4072,14 +3504,6 @@ export const MockResult: MockedResult = {
         state: 'Tyne and Wear',
         country: 'United Kingdom',
         postcode: 'V4 0BA',
-        coordinates: {
-          latitude: '-13.4125',
-          longitude: '-59.1312',
-        },
-        timezone: {
-          offset: '-8:00',
-          description: 'Pacific Time (US & Canada)',
-        },
       },
       email: 'suzanna.rivera@example.com',
       login: {
@@ -4129,14 +3553,6 @@ export const MockResult: MockedResult = {
         state: 'Bremen',
         country: 'Germany',
         postcode: 25634,
-        coordinates: {
-          latitude: '-41.7258',
-          longitude: '-53.5054',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'eleni.buss@example.com',
       login: {
@@ -4186,14 +3602,6 @@ export const MockResult: MockedResult = {
         state: 'Friesland',
         country: 'Netherlands',
         postcode: '5183 HR',
-        coordinates: {
-          latitude: '-37.9867',
-          longitude: '179.1962',
-        },
-        timezone: {
-          offset: '+7:00',
-          description: 'Bangkok, Hanoi, Jakarta',
-        },
       },
       email: 'jannette.kastermans@example.com',
       login: {
@@ -4243,14 +3651,6 @@ export const MockResult: MockedResult = {
         state: 'Syddanmark',
         country: 'Denmark',
         postcode: 86194,
-        coordinates: {
-          latitude: '6.4653',
-          longitude: '105.4552',
-        },
-        timezone: {
-          offset: '+1:00',
-          description: 'Brussels, Copenhagen, Madrid, Paris',
-        },
       },
       email: 'lucas.hansen@example.com',
       login: {
@@ -4300,14 +3700,6 @@ export const MockResult: MockedResult = {
         state: "Val-D'Oise",
         country: 'France',
         postcode: 68227,
-        coordinates: {
-          latitude: '-85.0813',
-          longitude: '50.6374',
-        },
-        timezone: {
-          offset: '+9:00',
-          description: 'Tokyo, Seoul, Osaka, Sapporo, Yakutsk',
-        },
       },
       email: 'armand.lambert@example.com',
       login: {
@@ -4357,14 +3749,6 @@ export const MockResult: MockedResult = {
         state: 'Schleswig-Holstein',
         country: 'Germany',
         postcode: 19775,
-        coordinates: {
-          latitude: '-3.8064',
-          longitude: '-55.4513',
-        },
-        timezone: {
-          offset: '+3:30',
-          description: 'Tehran',
-        },
       },
       email: 'ramon.mahn@example.com',
       login: {
@@ -4414,14 +3798,6 @@ export const MockResult: MockedResult = {
         state: 'Cantabria',
         country: 'Spain',
         postcode: 21640,
-        coordinates: {
-          latitude: '81.6234',
-          longitude: '3.6490',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'nicolas.velasco@example.com',
       login: {
@@ -4471,14 +3847,6 @@ export const MockResult: MockedResult = {
         state: 'Tlaxcala',
         country: 'Mexico',
         postcode: 98662,
-        coordinates: {
-          latitude: '49.5835',
-          longitude: '71.1650',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'fernando.galindo@example.com',
       login: {
@@ -4528,14 +3896,6 @@ export const MockResult: MockedResult = {
         state: 'Balıkesir',
         country: 'Turkey',
         postcode: 67269,
-        coordinates: {
-          latitude: '-18.3298',
-          longitude: '63.2846',
-        },
-        timezone: {
-          offset: '+5:00',
-          description: 'Ekaterinburg, Islamabad, Karachi, Tashkent',
-        },
       },
       email: 'gul.pekkan@example.com',
       login: {
@@ -4585,14 +3945,6 @@ export const MockResult: MockedResult = {
         state: 'Brandenburg',
         country: 'Germany',
         postcode: 66253,
-        coordinates: {
-          latitude: '-29.4421',
-          longitude: '7.6900',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'jorg.raith@example.com',
       login: {
@@ -4642,14 +3994,6 @@ export const MockResult: MockedResult = {
         state: 'Tasmania',
         country: 'Australia',
         postcode: 6094,
-        coordinates: {
-          latitude: '-50.9940',
-          longitude: '140.9167',
-        },
-        timezone: {
-          offset: '-3:30',
-          description: 'Newfoundland',
-        },
       },
       email: 'herbert.barnes@example.com',
       login: {
@@ -4699,14 +4043,6 @@ export const MockResult: MockedResult = {
         state: 'Midtjylland',
         country: 'Denmark',
         postcode: 81514,
-        coordinates: {
-          latitude: '-73.9265',
-          longitude: '-81.6535',
-        },
-        timezone: {
-          offset: '+5:45',
-          description: 'Kathmandu',
-        },
       },
       email: 'sara.andersen@example.com',
       login: {
@@ -4756,14 +4092,6 @@ export const MockResult: MockedResult = {
         state: 'Canarias',
         country: 'Spain',
         postcode: 12170,
-        coordinates: {
-          latitude: '-60.1039',
-          longitude: '86.2862',
-        },
-        timezone: {
-          offset: '-3:00',
-          description: 'Brazil, Buenos Aires, Georgetown',
-        },
       },
       email: 'gema.lozano@example.com',
       login: {
@@ -4813,14 +4141,6 @@ export const MockResult: MockedResult = {
         state: 'Sør-Trøndelag',
         country: 'Norway',
         postcode: '4900',
-        coordinates: {
-          latitude: '85.4982',
-          longitude: '135.8896',
-        },
-        timezone: {
-          offset: '-7:00',
-          description: 'Mountain Time (US & Canada)',
-        },
       },
       email: 'emilian.austnes@example.com',
       login: {
@@ -4870,14 +4190,6 @@ export const MockResult: MockedResult = {
         state: 'Harkivska',
         country: 'Ukraine',
         postcode: 14342,
-        coordinates: {
-          latitude: '1.7804',
-          longitude: '143.7943',
-        },
-        timezone: {
-          offset: '-11:00',
-          description: 'Midway Island, Samoa',
-        },
       },
       email: "v'yacheslava.kalenichenko@example.com",
       login: {
@@ -4927,14 +4239,6 @@ export const MockResult: MockedResult = {
         state: 'Sjælland',
         country: 'Denmark',
         postcode: 65258,
-        coordinates: {
-          latitude: '66.8356',
-          longitude: '24.8151',
-        },
-        timezone: {
-          offset: '+4:00',
-          description: 'Abu Dhabi, Muscat, Baku, Tbilisi',
-        },
       },
       email: 'anna.christensen@example.com',
       login: {
@@ -4984,14 +4288,6 @@ export const MockResult: MockedResult = {
         state: 'Tocantins',
         country: 'Brazil',
         postcode: 58480,
-        coordinates: {
-          latitude: '57.3625',
-          longitude: '-56.9385',
-        },
-        timezone: {
-          offset: '-4:00',
-          description: 'Atlantic Time (Canada), Caracas, La Paz',
-        },
       },
       email: 'alexandrino.damata@example.com',
       login: {
@@ -5041,14 +4337,6 @@ export const MockResult: MockedResult = {
         state: 'Drenthe',
         country: 'Netherlands',
         postcode: '9826 OJ',
-        coordinates: {
-          latitude: '-17.1805',
-          longitude: '-32.1741',
-        },
-        timezone: {
-          offset: '-1:00',
-          description: 'Azores, Cape Verde Islands',
-        },
       },
       email: 'kristian.tettero@example.com',
       login: {
@@ -5098,14 +4386,6 @@ export const MockResult: MockedResult = {
         state: 'Kirovogradska',
         country: 'Ukraine',
         postcode: 78692,
-        coordinates: {
-          latitude: '69.8740',
-          longitude: '84.5213',
-        },
-        timezone: {
-          offset: '+5:45',
-          description: 'Kathmandu',
-        },
       },
       email: 'soncedar.krivonis@example.com',
       login: {
@@ -5155,14 +4435,6 @@ export const MockResult: MockedResult = {
         state: 'New South Wales',
         country: 'Australia',
         postcode: 5428,
-        coordinates: {
-          latitude: '-83.2570',
-          longitude: '-36.6375',
-        },
-        timezone: {
-          offset: '+1:00',
-          description: 'Brussels, Copenhagen, Madrid, Paris',
-        },
       },
       email: 'jackson.brewer@example.com',
       login: {
@@ -5212,14 +4484,6 @@ export const MockResult: MockedResult = {
         state: 'Danmark',
         country: 'Denmark',
         postcode: 95532,
-        coordinates: {
-          latitude: '48.8487',
-          longitude: '-120.9223',
-        },
-        timezone: {
-          offset: '+7:00',
-          description: 'Bangkok, Hanoi, Jakarta',
-        },
       },
       email: 'anna.pedersen@example.com',
       login: {
@@ -5269,14 +4533,6 @@ export const MockResult: MockedResult = {
         state: 'Rogaland',
         country: 'Norway',
         postcode: '1789',
-        coordinates: {
-          latitude: '87.2980',
-          longitude: '173.1650',
-        },
-        timezone: {
-          offset: '+10:00',
-          description: 'Eastern Australia, Guam, Vladivostok',
-        },
       },
       email: 'ali.lehmann@example.com',
       login: {
@@ -5326,14 +4582,6 @@ export const MockResult: MockedResult = {
         state: 'Ciudad de Mexico',
         country: 'Mexico',
         postcode: 92117,
-        coordinates: {
-          latitude: '-76.7211',
-          longitude: '174.9214',
-        },
-        timezone: {
-          offset: '+7:00',
-          description: 'Bangkok, Hanoi, Jakarta',
-        },
       },
       email: 'teresa.galvan@example.com',
       login: {
@@ -5383,14 +4631,6 @@ export const MockResult: MockedResult = {
         state: 'Tennessee',
         country: 'United States',
         postcode: 30586,
-        coordinates: {
-          latitude: '43.2387',
-          longitude: '111.2670',
-        },
-        timezone: {
-          offset: '+4:00',
-          description: 'Abu Dhabi, Muscat, Baku, Tbilisi',
-        },
       },
       email: 'timmothy.richardson@example.com',
       login: {
@@ -5440,14 +4680,6 @@ export const MockResult: MockedResult = {
         state: 'Mato Grosso',
         country: 'Brazil',
         postcode: 58192,
-        coordinates: {
-          latitude: '8.0365',
-          longitude: '-88.7959',
-        },
-        timezone: {
-          offset: '-2:00',
-          description: 'Mid-Atlantic',
-        },
       },
       email: 'luciola.daconceicao@example.com',
       login: {
@@ -5497,14 +4729,6 @@ export const MockResult: MockedResult = {
         state: 'Dorset',
         country: 'United Kingdom',
         postcode: 'E7K 6HY',
-        coordinates: {
-          latitude: '-51.5201',
-          longitude: '-13.0763',
-        },
-        timezone: {
-          offset: '-6:00',
-          description: 'Central Time (US & Canada), Mexico City',
-        },
       },
       email: 'lillian.craig@example.com',
       login: {
@@ -5554,14 +4778,6 @@ export const MockResult: MockedResult = {
         state: 'Amasya',
         country: 'Turkey',
         postcode: 18457,
-        coordinates: {
-          latitude: '-61.7788',
-          longitude: '64.8459',
-        },
-        timezone: {
-          offset: '-10:00',
-          description: 'Hawaii',
-        },
       },
       email: 'giray.babacan@example.com',
       login: {
@@ -5611,14 +4827,6 @@ export const MockResult: MockedResult = {
         state: 'Toplica',
         country: 'Serbia',
         postcode: 28641,
-        coordinates: {
-          latitude: '23.0955',
-          longitude: '54.1817',
-        },
-        timezone: {
-          offset: '-1:00',
-          description: 'Azores, Cape Verde Islands',
-        },
       },
       email: 'milena.pekovic@example.com',
       login: {
@@ -5668,14 +4876,6 @@ export const MockResult: MockedResult = {
         state: 'Aragón',
         country: 'Spain',
         postcode: 96826,
-        coordinates: {
-          latitude: '-76.0270',
-          longitude: '-41.5623',
-        },
-        timezone: {
-          offset: '-10:00',
-          description: 'Hawaii',
-        },
       },
       email: 'oscar.herrero@example.com',
       login: {

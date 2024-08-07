@@ -22,7 +22,7 @@ export interface UserResult {
       name: string;
       number: number;
     };
-    postcode: string;
+    postcode: string | number;
     country: string;
     state: string;
   };

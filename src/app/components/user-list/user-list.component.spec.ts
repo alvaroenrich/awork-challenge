@@ -10,9 +10,22 @@ describe('UserListComponent', () => {
   let component: UserListComponent;
   let fixture: ComponentFixture<UserListComponent>;
 
+  let originalWindow: any;
+
   const mockedUsers = User.mapFromUserResult(
     MockResult.results as UserResult[],
   );
+
+  beforeAll(() => {
+    originalWindow = (global as any).window;
+    (global as any).window = {
+      innerHeight: 800,
+    };
+  });
+
+  afterAll(() => {
+    (global as any).window = originalWindow;
+  });
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({

@@ -75,3 +75,8 @@ Let us know if you have any questions and refer to the instructions sent to you.
   ```
   SOLUTION: Again, running out of time I quickly implemented a reusable paginator component. This paginator can be improved, use icons instead of text directly, and have a better l&f. However, it works and I was trying to quickly get the challenge achieved.
   ```
+
+## Extra info
+
+- I was not able to ran tests. I really ran out of time when I was trying to configure Jasmine to accept some config files to mock the window object.
+- App available [here](https://alvaroenrich.github.io/awork-challenge/)
