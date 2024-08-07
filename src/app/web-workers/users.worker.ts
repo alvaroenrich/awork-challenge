@@ -7,27 +7,35 @@ addEventListener('message', ({ data }) => {
   const users: User[] = data.users;
   const category: GroupingCategories = data.category;
 
-  // Split data in chunks of 100 to improve data process times.
-  const CHUNK_SIZE = 100;
+  // Split data in chunks of 400 to improve data process times.
+  const CHUNK_SIZE = 400;
 
-  let result = {};
+  let result: Record<string, User[]> = {};
   let currentIndex = 0;
 
   const processNextDataChunk = () => {
     const chunk = users.slice(currentIndex, currentIndex + CHUNK_SIZE);
+    let newProcessedChunk: Record<string, User[]> = {};
     switch (category) {
       case 'ALPHABETICALLY':
-        result = { ...result, ...groupAlphabetically(chunk) };
+        newProcessedChunk = groupAlphabetically(chunk);
         break;
       case 'AGE':
-        result = { ...result, ...groupAge(chunk) };
+        newProcessedChunk = groupAge(chunk);
         break;
       case 'NATIONALITY':
-        result = { ...result, ...groupNationality(chunk) };
+        newProcessedChunk = groupNationality(chunk);
         break;
       default:
         result = {};
     }
+    Object.keys(newProcessedChunk).forEach((key) => {
+      if (result[key]) {
+        result[key] = [...result[key], ...newProcessedChunk[key]];
+      } else {
+        result[key] = newProcessedChunk[key];
+      }
+    });
 
     currentIndex += CHUNK_SIZE;
     if (currentIndex < users.length) {
@@ -42,28 +50,17 @@ addEventListener('message', ({ data }) => {
 });
 
 const groupAlphabetically = (data: User[]): Record<string, User[]> => {
-  const result: Record<string, User[]> = {};
-  for (let i = 0; i < 26; i++) {
-    const letter = String.fromCharCode(65 + i); // Generate letters from A to Z
-    result[letter] = [];
-  }
-
-  data.forEach((user) => {
-    if (user.firstname) {
-      const letter = user.firstname.charAt(0).toUpperCase();
-      if (result[letter]) {
-        result[letter].push(user);
-      }
+  return data.reduce((acc: Record<string, User[]>, user: User) => {
+    if (!user.firstname) {
+      throw Error('User does not have firstname. It cant be grouped');
     }
-  });
-
-  for (const letter in result) {
-    if (result[letter].length === 0) {
-      delete result[letter];
+    const firstLetter = user.firstname.charAt(0).toUpperCase();
+    if (!acc[firstLetter]) {
+      acc[firstLetter] = [];
     }
-  }
-
-  return result;
+    acc[firstLetter].push(user);
+    return acc;
+  }, {});
 };
 
 const groupNationality = (data: User[]): Record<string, User[]> => {
